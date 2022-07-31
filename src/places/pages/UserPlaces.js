@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PlaceList from '../components/PlaceList';
+import { useParams } from 'react-router-dom';
 
 const DUMMY_PLACES = [
     {
@@ -14,9 +15,9 @@ const DUMMY_PLACES = [
         creatorId: 'u1',
     },
     {
-        key: 'p1',
-        id: 'p1',
-        title: 'Space Needle',
+        key: 'p2',
+        id: 'p2',
+        title: 'Space Needle 2',
         image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Space_Needle_2011-07-04.jpg',
         description: "One of Seattle's most iconic buildings.",
         address: '400 Broad Street, Seattle, Washington 98109',
@@ -25,7 +26,12 @@ const DUMMY_PLACES = [
     },
 ];
 const UserPlaces = () => {
-    return <PlaceList items={DUMMY_PLACES} />;
+    const userId = useParams().userId;
+    const loadedPlaces = DUMMY_PLACES.filter(
+        place => place.creatorId === userId
+    );
+
+    return <PlaceList items={loadedPlaces} />;
 };
 
 export default UserPlaces;
