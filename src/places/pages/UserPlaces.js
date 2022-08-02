@@ -11,7 +11,7 @@ const DUMMY_PLACES = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Space_Needle_2011-07-04.jpg',
         description: "One of Seattle's most iconic buildings.",
         address: '400 Broad Street, Seattle, Washington 98109',
-        coordinates: { lat: 47.6204, long: 122.3491 },
+        coordinates: { lat: 47.6204, lng: -122.3491 },
         creatorId: 'u1',
     },
     {
@@ -21,7 +21,7 @@ const DUMMY_PLACES = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Space_Needle_2011-07-04.jpg',
         description: "One of Seattle's most iconic buildings.",
         address: '400 Broad Street, Seattle, Washington 98109',
-        coordinates: { lat: 47.6204, long: 122.3491 },
+        coordinates: { lat: 47.6204, lng: 122.3491 },
         creatorId: 'u2',
     },
 ];
